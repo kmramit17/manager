@@ -1,5 +1,6 @@
 package google;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
@@ -17,6 +18,13 @@ public class NewTest1
 	  Thread.sleep(5000);
   }
   @Test(priority=2)
+  public void operate() throws Exception
+  {
+	  driver.findElement(By.id("identifierId")).sendKeys("amit1234@gmail.com");
+	  Thread.sleep(5000);
+  }
+  
+  @Test(priority=3)
   public void close()
   {
 	  driver.close();
